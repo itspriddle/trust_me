@@ -3,3 +3,4 @@ bin/*
 !.bundle/config
 Gemfile.lock
 pkg/*
+.yardoc
