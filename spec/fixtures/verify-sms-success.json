@@ -1,0 +1,15 @@
+{
+   "reference_id" : "ABCDEF0123456789ABCDEF0123456789",
+   "resource_uri" : "/v1/verify/ABCDEF0123456789ABCDEF0123456789",
+   "sub_resource" : "sms",
+   "errors": [],
+   "status" : {
+      "updated_on" : "2012-04-17T22:26:43.784963Z",
+      "code" : 290,
+      "description" : "Message in progress"
+   },
+   "verify" : {
+      "code_state" : "UNKNOWN",
+      "code_entered" : ""
+   }
+}
