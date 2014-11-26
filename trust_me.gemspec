@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.license    = "MIT"
 
   s.files      = %w[ Rakefile README.markdown ]
-  s.files     += Dir["{lib,spec}/**/*"]
+  s.files     += Dir["{lib,spec,vendor}/**/*"]
 
   s.add_development_dependency "rspec",       "3.1"
   s.add_development_dependency "webmock",     "1.20.4"
