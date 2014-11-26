@@ -4,6 +4,7 @@ require "uri"
 require "net/http"
 require "base64"
 require "openssl"
+require "securerandom"
 
 class TrustMe
   # Public: URL to the TeleSign REST API.
@@ -119,7 +120,7 @@ class TrustMe
   def generate_headers(options = {})
     content_type = "application/x-www-form-urlencoded"
     date         = Time.now.gmtime.strftime("%a, %d %b %Y %H:%M:%S GMT")
-    nonce        = `uuidgen`.chomp
+    nonce        = generate_uuid
 
     content = [
       "POST",
@@ -179,6 +180,13 @@ class TrustMe
   # Returns a Hash.
   def parse_json(string)
     JSON.parse string
+  end
+
+  # Private: Generates a UUID.
+  #
+  # Returns a String.
+  def generate_uuid
+    SecureRandom.uuid
   end
 
   # Private: Submits an API request via POST.

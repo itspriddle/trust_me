@@ -19,7 +19,7 @@ describe TrustMe do
 
   before do
     allow(Time).to receive(:now) { now }
-    allow(trust_me).to receive(:`).with("uuidgen") { uuid }
+    allow(SecureRandom).to receive(:uuid) { uuid }
   end
 
   shared_examples_for "api_call" do |method, extra_request_params = {}|
