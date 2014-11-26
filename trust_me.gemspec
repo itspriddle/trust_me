@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.version    = TrustMe::Version
   s.summary    = "TrustMe: Wrapper for the TeleSign REST API"
   s.homepage   = "https://github.com/site5/trust_me"
-  s.authors    = ["Joshua Priddle"]
-  s.email      = "jpriddle@site5.com"
+  s.authors    = ["Joshua Priddle", "Justin Mazzi"]
+  s.email      = ["jpriddle@site5.com", "jmazzi@gmail.com"]
   s.license    = "MIT"
 
   s.files      = %w[ Rakefile README.markdown ]
